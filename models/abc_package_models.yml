@@ -2,7 +2,7 @@ version: 2
 
 models:
   - name: abc_package_query_log
-    description: "{{ doc('abc_package_query_log') }}"
+    description: "{{ doc('../docs/abc_package_query_log') }}"
     columns:
       - name: gbq_job_project_id
         description: The ID of the project where the job was run.
