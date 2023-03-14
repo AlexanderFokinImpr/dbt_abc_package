@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: abc_package_query_log
+    description: "{{ docs('abc_package_query_log.md') }}"
+    columns:
+      - name: gbq_job_project_id
+        description: The ID of the project where the job was run.
+      - name: gbq_job_user_email
+        description: The email of the user who ran the job.
+      - name: gbq_job_id
+        description: The ID of the job.
+      - name: gbq_job_type
+        description: The type of the job (query, load, etc.).
+      - name: gbq_job_start_time
+        description: The time when the job started.
+      - name: gbq_job_end_time
+        description: The time when the job ended.
+      - name: gbq_job_query
+        description: The SQL query that was run (if the job type is "query").
+      - name: gbq_job_reason
+        description: The reason for any errors that occurred during the job.
+      - name: gbq_job_location
+        description: The location of any errors that occurred during the job.
+      - name: gbq_job_message
+        description: The error message for any errors that occurred during the job.

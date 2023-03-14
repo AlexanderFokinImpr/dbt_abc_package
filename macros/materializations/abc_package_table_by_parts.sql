@@ -1,4 +1,4 @@
-{% materialization table_by_parts, adapter='clickhouse' %}
+{% materialization abc_package_table_by_parts, adapter='clickhouse' %}
 
 -- Info about dbt-core macros here:
 -- https://github.com/dbt-labs/dbt-core/tree/main/core/dbt/include/global_project/macros/adapters
@@ -34,7 +34,7 @@
   -- Create empty target relation 
   {{ drop_relation_if_exists(target_relation) }}
 
-  {%- set table_ranges_by_quantile = mcr_get_table_ranges_by_quantile(quantile_table, quantile_column, count_of_parts) -%}
+  {%- set table_ranges_by_quantile = mcr_abc_package_get_table_ranges_by_quantile(quantile_table, quantile_column, count_of_parts) -%}
 
   {% set target_relation_exists, target_relation = 
                     get_or_create_or_update_relation (  database = none, 
