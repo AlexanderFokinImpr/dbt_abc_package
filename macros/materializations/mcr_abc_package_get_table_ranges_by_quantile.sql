@@ -1,4 +1,4 @@
-{%- macro mcr_get_table_ranges_by_quantile(quantile_table_name, quantile_column, count_of_parts=10) -%}
+{%- macro mcr_abc_package_get_table_ranges_by_quantile(quantile_table_name, quantile_column, count_of_parts=10) -%}
 
 {% set quantiles_table = get_quantiles_table(quantile_table_name, quantile_column, count_of_parts) %}
 
